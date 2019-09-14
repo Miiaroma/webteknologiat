@@ -1,0 +1,52 @@
+header{
+    color: black;
+    background-color: lavender;
+    font-family: Verdana;
+    text-align: left;
+    height:50px;
+   
+}
+
+aside{
+    display: inline-block;
+    font-family: Verdana;
+    background-color:lavender;
+    width: 2000px;
+    height: 20px;
+    font-size: 14px;
+}
+body 
+{
+    background-color: lavender;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: Verdana;
+    text-align: left;
+}
+
+
+h1 {
+    color: blueviolet;
+    text-align: center;
+    
+}
+
+h2{
+    color: blueviolet;
+    text-align: center;
+}
+p {
+    font-family: Verdana;
+    font-size: 14 px;
+}
+
+footer
+{
+    background-color: blueviolet;    
+    width: 2000px;
+    height: 100px;     
+    font-family: Verdana;
+    display: flex;
+    justify-content: center;
+    padding: 5px;    
+}
