@@ -6,6 +6,7 @@ header{
     height:50px;
    
 }
+
 .topnav {
     background-color: lavender;
     overflow: hidden;
@@ -53,17 +54,11 @@ h2{
     color: blueviolet;
     text-align: center;
 }
-p 
-{
+p {
     font-family: Verdana;
     font-size: 14 px;
     margin-left: 200px;
-    margin-right: 200px; 
-}
-
-ul
-{   margin-left: 200px;
-    margin-right: 200px; 
+    margin-right: 200px;
 }
 
 footer
@@ -71,8 +66,10 @@ footer
     background-color: blueviolet;    
     width: 2000px;
     height: 100px;     
-    font-family: Verdana;    
-    justify-content: center;
+    font-family: Verdana;
     display: flex;
-    padding: 5px;    
+    justify-content: center;
+    padding: 5px;  
+    margin-left: 25px;
+    margin-right: 25px; 
 }
