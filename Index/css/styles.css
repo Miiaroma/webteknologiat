@@ -4,8 +4,9 @@ header{
     font-family: Verdana;
     text-align: left;
     height:50px;
-   
+    margin-left: 15px;   
 }
+
 .topnav {
     background-color: lavender;
     overflow: hidden;
@@ -36,8 +37,8 @@ header{
 body 
 {
     background-color: lavender;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
     font-family: Verdana;
     text-align: left;
 }
@@ -68,11 +69,10 @@ ul
 
 footer
 {
-    background-color: blueviolet;    
-    width: 2000px;
-    height: 100px;     
+    background-color: blueviolet;      
+    height: 100px; 
+    text-align: center;    
     font-family: Verdana;    
-    justify-content: center;
-    display: flex;
+    position: relative;
     padding: 5px;    
 }
