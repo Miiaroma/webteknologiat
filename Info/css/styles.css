@@ -40,7 +40,7 @@ body
   margin-left: 0px;
   margin-right: 0px;
   font-family: Verdana;
-  text-align: left;
+  text-align: center;
 }
 
 h1 {
@@ -67,15 +67,16 @@ ul
 
 address
 {
-  margin-left: 200px;
+  margin-left: 50px;
 }
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 50%;
-  margin-left: 200px;
-  margin-right: 200px; 
+  margin-left: 400px;
+  margin-right: 400px;
+
 }
 
 td, th {
