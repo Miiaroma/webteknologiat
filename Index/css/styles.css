@@ -7,12 +7,13 @@ header{
     margin-left: 15px;   
 }
 
-.topnav {
+.topnav
+{
     background-color: lavender;
     overflow: hidden;
-  }
+}
   
-  /* Style the links inside the navigation bar */
+/* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     color: black;
@@ -20,49 +21,48 @@ header{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+}
   
-  /* Change the color of links on hover */
+/* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
   
-  /* Add a color to the active/current link */
-  .topnav a.active {
+/* Add a color to the active/current link */
+  .topnav a.active 
+  {
     background-color:blueviolet;
     color: white;
-  }
+}
 
 body 
 {
     background-color: lavender;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     font-family: Verdana;
     text-align: left;
 }
 
 section{
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vw;
 }
 
-h1 {
-    color: blueviolet;
-    text-align: center;
-    
+h1,h2 
+{
+    color: blueviolet;     
 }
 
-h2{
-    color: blueviolet;
-    text-align: center;
+#banner{
+height: 300px;
 }
 p 
 {
     font-family: Verdana;
-    font-size: 14 px;
-    
+    font-size: 14 px;    
 }
 
 ul
