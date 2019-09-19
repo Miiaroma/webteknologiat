@@ -38,9 +38,7 @@ header{
 
 body 
 {
-    background-color: lavender;
-    margin-left: 0;
-    margin-right: 0;
+    background-color: lavender;    
     font-family: Verdana;
     text-align: left;
 }
@@ -59,15 +57,11 @@ h1,h2
 #banner{
 height: 300px;
 }
+
 p 
 {
     font-family: Verdana;
     font-size: 14 px;    
-}
-
-ul
-{   margin-left: 0;
-    margin-right: 0; 
 }
 
 footer
