@@ -61,8 +61,8 @@ p
 }
 
 ul
-{ margin-left: 200px;
-  margin-right: 200px; 
+{ margin-left: 100px;
+  margin-right: 100px; 
 }
 
 address
@@ -87,6 +87,24 @@ td, th {
 
 tr:nth-child(odd) {
   background-color: lightslategrey;
+}
+
+#first-row 
+{
+  animation-duration: 10s;
+  animation-name: slidein;
+}
+
+@keyframes slidein
+{
+from
+{
+ 
+opacity: 1;
+}
+to {
+  opacity: 0;
+}
 }
 
 footer
