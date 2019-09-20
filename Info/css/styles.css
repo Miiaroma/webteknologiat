@@ -34,6 +34,12 @@ header{
   color: white;
 }
 
+#banner
+{
+  max-height: 300px;
+  display: flex;
+}
+
 body 
 {
   background-color: lavender; 

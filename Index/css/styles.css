@@ -36,6 +36,12 @@ header{
     color: white;
 }
 
+#banner
+{
+  max-height: 300px;
+  display: flex;
+}
+
 body 
 {
     background-color: lavender;    
@@ -52,10 +58,6 @@ section{
 h1,h2 
 {
     color: blueviolet;     
-}
-
-#banner{
-height: 300px;
 }
 
 p 
