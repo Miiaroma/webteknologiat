@@ -1,22 +1,46 @@
-window.onload = function()
+window.onload = function () {
+    init();
+};
+
+function getRandomInt(min,max) 
 {
-    function getRandomInt();
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
-function getRandomInt()
+function init(){
+    //console.log(getRandomInt(1,10));
+    document.getElementById("valuea").value = getRandomInt(1,10);
+    document.getElementById("valueb").value = getRandomInt(1,10);     
+}
+
+function decreaseNumber() {
+    var x = document.getElementById("valuea").value;
+    x--;
+    var y = x;    
+    document.getElementById("valuea").value = x;     
+}
+
+function decreaseNumberB()
 {
-    document.getElementById("number").value =
-    Math.floor(Math.random() * 11);
+    var x = document.getElementById("valueb").value;
+    x--;
+    var y = x;    
+    document.getElementById("valueb").value = x; 
 }
 
-function dereaseNumber(){
-    var number = document.getElementById("number").value;
-    var secondNumber = document.getElementById("secondNumber").value;
-    document.getElementById("number").value= number-1;
-    document.getElementById("secondNumber").value= secondNumber-1;
+function increaseNumber() {
+    var x = document.getElementById("valuea").value;
+    x++;
+    var y = x;    
+    document.getElementById("valuea").value = x;    
 }
 
-function increaseNumber(){
-    var number = document.getElementById("number").value + 1;
-    var secondNumber = document.getElementById("secondNumber").value + 1;
+function increaseNumberB()
+{
+    var x = document.getElementById("valueb").value;
+    x++;
+    var y = x;    
+    document.getElementById("valueb").value = x; 
 }
