@@ -50,16 +50,16 @@
             <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')"> 
             <input type="number" id="valuea" value="" min="1" max="11"> 
             <input type="button" id="plus" value="+" onclick="increaseNumber('valuea')">            
-            <select id="select">
-            <option value="add" onchange="addNumber()">+</option>
+            <select id="select" onchange="calculator()">
+            <option value="addition">+</option>
             <option value="subtract">-</option>
             <option value="multiple">*</option>
             <option value="divide">/</option>
             </select>
             <input type="button" id="minus" value="-" onclick="decreaseNumber('valueb')"> 
-            <input type="number" id="valueb" value="" min="1" max="11"> 
+            <input type="number" id="valueb" value="" min="1" max="11">  
             <input type="button" id="plus" value="+" onclick="increaseNumber('valueb')">
-            <input type="button" id="show" value="Laske" > <input type="number" id="result">
+            <input type="button" id="show" value="Laske" onclick="operate()" > <input type="number" id="result">
         </section><br>
     </main>
     <footer>        
