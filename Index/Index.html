@@ -47,18 +47,18 @@
                 <li>Kerto- ja</li>
                 <li>Jakolasku</li>
             </ul>
-            <input type="button" id="minus" value="-" onclick="decreaseNumber()"> 
+            <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')"> 
             <input type="number" id="valuea" value="" min="1" max="11"> 
-            <input type="button" id="plus" value="+" onclick="increaseNumber()">
+            <input type="button" id="plus" value="+" onclick="increaseNumber('valuea')">            
             <select id="select">
-            <option value="plus">+</option>
-            <option value="minus">-</option>
+            <option value="add" onchange="addNumber()">+</option>
+            <option value="subtract">-</option>
             <option value="multiple">*</option>
             <option value="divide">/</option>
             </select>
-            <input type="button" id="minus" value="-" onclick="decreaseNumberB()"> 
+            <input type="button" id="minus" value="-" onclick="decreaseNumber('valueb')"> 
             <input type="number" id="valueb" value="" min="1" max="11"> 
-            <input type="button" id="plus" value="+" onclick="increaseNumberB()">
+            <input type="button" id="plus" value="+" onclick="increaseNumber('valueb')">
             <input type="button" id="show" value="Laske" > <input type="number" id="result">
         </section><br>
     </main>
