@@ -51,36 +51,37 @@ function increaseNumber(elementName) {
 }*/
 
 function calculator() {
+    
     var x = document.getElementById("valuea").value;
     var y = document.getElementById("valueb").value;
-    document.getElementById("result").value = operate(x, y);
+    document.getElementById("result").value = operate(x, y,select);
 }
 
-function operate(x, y) {
-    if (select == '+') {
+function operate(x, y, select) {
+    if (select == 'addition') {
         return x + y;
     }
 
-    else if (select == '-') {
+    else if (select == 'subtraction') {
         return x - y;
     }
 
-    else if (select == '*') {
+    else if (select == 'multiplication') {
         return x * y;
     }
-    else if (select == '/') {
+    else if (select == 'division') {
         return x / y;
     }
 }
 
-function validate(value) 
+/*function validate(value) 
 {
     if (value == null || value == "") {
-        alert("Required Field");
+        alert("Pakollinen kenttä");
         return 0;
     } else if (isNaN(value)) {
-        alert("Must be a Number Field");
+        alert("Syötteen pitää olla numero");
         return 0;
     } else return value;
-}
+}*/
 
