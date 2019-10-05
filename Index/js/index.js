@@ -14,13 +14,6 @@ function init() {
     document.getElementById("valueb").value = getRandomInt(1, 10);
 }
 
-/*function decreaseNumber() {
-    var x = document.getElementById("valuea").value;
-    x--;
-    var y = x;
-    document.getElementById("valuea").value = x;
-}*/
-
 function decreaseNumber(elementId) {
 
     var x = document.getElementById(elementId).value;
@@ -54,6 +47,7 @@ function calculator() {
     
     var x = document.getElementById("valuea").value;
     var y = document.getElementById("valueb").value;
+    var select = document.getElementById('select').value;
     document.getElementById("result").value = operate(x, y,select);
 }
 
@@ -84,4 +78,3 @@ function operate(x, y, select) {
         return 0;
     } else return value;
 }*/
-
