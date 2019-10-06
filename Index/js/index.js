@@ -45,10 +45,22 @@ function increaseNumber(elementName) {
 
 function calculator() {
     
-    var x = document.getElementById("valuea").value;
-    var y = document.getElementById("valueb").value;
+    var x = parseInt(document.getElementById("valuea").value);
+    var y = parseInt(document.getElementById("valueb").value);
     var select = document.getElementById('select').value;
-    document.getElementById("result").value = operate(x, y,select);
+    document.getElementById("result").value = operate(x, y, select);  
+    
+    /*try {
+
+        var x = parseInt(validate(document.getElementById("valuea").value));
+        var y = parseInt(validate(document.getElementById("valueb").value));
+        var select = document.getElementById('select').value;
+        document.getElementById("result").value = operate(x, y, select);
+    }
+    catch (err) {
+
+        alert("Virhe: " + err.messaqge);
+    }*/
 }
 
 function operate(x, y, select) {
@@ -68,7 +80,7 @@ function operate(x, y, select) {
     }
 }
 
-/*function validate(value) 
+/*function validate(value)
 {
     if (value == null || value == "") {
         alert("Pakollinen kenttä");
