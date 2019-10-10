@@ -7,6 +7,23 @@
     <meta <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script
+  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script> 
+  <link  rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
+   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#dialog").dialog();
+        });
+    </script>--->
 </head>
 
 <body>
@@ -46,10 +63,14 @@
                 <li>Vähennys-</li>
                 <li>Kerto- ja</li>
                 <li>Jakolasku</li>
-            </ul><br>            
-            <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">
-            <input type="text" id="valuea" value="" min="1" max="11" readonly>
+            </ul><br>
+            <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">            
+            <!--<div id="dialog" title="Huom!">
+                <p>Luku voi olla väliltä 1 -10.</p>
+              </div>-->
+            <input type="number" id="valuea" value="" min="1" max="11" readonly>           
             <input type="button" id="plus" value="+" onclick="increaseNumber('valuea')">
+            <div id="dialogbox" title='Error'>The first value out of range!</div>
             <select id="select">
                 <option value="addition">+</option>
                 <option value="subtraction">-</option>
@@ -57,10 +78,10 @@
                 <option value="division">/</option>
             </select>
             <input type="button" id="minus" value="-" onclick="decreaseNumber('valueb')">
-            <input type="text" id="valueb" value="" min="1" max="11" readonly>
-            <input type="button" id="plus" value="+" onclick="increaseNumber('valueb')">
+            <input type="number" id="valueb" value="" min="1" max="11" readonly>
+            <input type="button" id="btnplus" value="+" onclick="increaseNumber('valueb')">
             <input type="submit" value="Laske" onclick="calculator()">
-            <input type="text" id="result" value=""/>                       
+            <input type="number" id="result" value="" />
         </section><br>
     </main>
     <footer>

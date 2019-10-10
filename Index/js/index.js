@@ -1,12 +1,44 @@
-window.onload = function () {
-    init();
-};
+/*window.onload = function () {
+    //init();
+    
+}*/
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
+
+$(function()
+{
+    init();
+    console.log( "ready!");
+    let randNr = getRandomInt(1,10);
+
+    $("#valuea").val(randNr);
+    console.log(randNr);
+
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+});
+
+$("#plus").click(function()
+{let value = $("#valuea").val();
+console.log(value);
+if (value=undefined || value>10 || value<1){
+    $("#dialogbox").dialog("open");
+}
+});
+
+
+$("#minus").click(function()
+{let value = $("#valuea").val();
+console.log(value);
+if (value=undefined || value>10 || value<1){
+    $("#dialogbox").dialog("open");
+}
+});
 
 function init() {
     //console.log(getRandomInt(1,10));
@@ -20,6 +52,7 @@ function decreaseNumber(elementId) {
     x--;
     var y = x;
     document.getElementById(elementId).value = x;
+    
 }
 
 /*function decreaseNumberB() {
