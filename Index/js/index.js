@@ -3,11 +3,26 @@
     
 }*/
 
+/*function Array()
+{
+    var schools = ['AMK', 'LUT1, 'LUT2'];
+}*/
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
+
+
+/*$("my_image".attr("src", "second.jpg")
+
+function getPreviousPicture(){
+
+    index--;
+    if (index<0) index = 2;
+    $(""
+}*/
 
 $(function()
 {
@@ -23,6 +38,36 @@ $(function()
     });
 });
 
+$(function()
+{
+    init();
+    console.log( "ready!");
+    let randNr = getRandomInt(1,10);
+
+    $("#valueb").val(randNr);
+    console.log(randNr);
+
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+});
+
+$("#minus").click(function()
+{let value = $("#valuea").val();
+console.log(value);
+if (value=undefined || value>10 || value<1){
+    $("#dialogbox").dialog("open");
+}
+});
+
+$("#btnminus").click(function()
+{let value = $("#valueb").val();
+console.log(value);
+if (value=undefined || value>10 || value<1){
+    $("#dialogbox").dialog("open");
+}
+});
+
 $("#plus").click(function()
 {let value = $("#valuea").val();
 console.log(value);
@@ -31,9 +76,8 @@ if (value=undefined || value>10 || value<1){
 }
 });
 
-
-$("#minus").click(function()
-{let value = $("#valuea").val();
+$("#btnplus").click(function()
+{let value = $("#valueb").val();
 console.log(value);
 if (value=undefined || value>10 || value<1){
     $("#dialogbox").dialog("open");

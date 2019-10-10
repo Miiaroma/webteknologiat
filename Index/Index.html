@@ -7,23 +7,12 @@
     <meta <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script
-  src="http://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script
-  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script> 
-  <link  rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
-   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#dialog").dialog();
-        });
-    </script>--->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
 </head>
 
 <body>
@@ -46,17 +35,16 @@
                 tradenomiopiskelija Saimaan ammattikorkeakoulussa.
             </p><br>
 
-            <h2>Sivuston tärkein sisältö</h2>
+            <h2>Vaihtuva elementti ja laskin</h2>
+            <div><a href="https://www.saimia.fi/"><img src="images/AMK.jpg" alt="AMK" width="300" height="200"></a><br>
+                <input type="text" id="Uni" value="AMK" maxlength="300" >
+            </div>
+            <div width="300"> <button id=previous i style='font-size:14px' class='fas'>&#xf048;</button>
+                <button id="stop" i style='font-size:14px' class='fas'>&#xf04d;</i></button>
+                <button id="next" i style='font-size:14px' class='fas'>&#xf051;</i></button onclick="getNextPicture()">
+            </div>
+            <br>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Egestas sed tempus urna et pharetra pharetra massa massa. Volutpat ac tincidunt
-                vitae semper quis lectus nulla. In
-                fermentum et sollicitudin ac orci phasellus. Ut venenatis tellus in metus vulputate. Aliquam etiam erat
-                velit scelerisque in dictum non consectetur.<br><br>
-                <a href="https://www.saimia.fi/"><img src="images/amk.jpg" alt="Amk" style="float:right" width="300"
-                        height="200"></a>
-            </p><br>
             Tämä on yksinkertainen laskin, jolla voit tehdä seuraavat laskutoimitukset satunnaisluvuilla:
             <ul>
                 <li>Yhteen-</li>
@@ -64,20 +52,17 @@
                 <li>Kerto- ja</li>
                 <li>Jakolasku</li>
             </ul><br>
-            <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">            
-            <!--<div id="dialog" title="Huom!">
-                <p>Luku voi olla väliltä 1 -10.</p>
-              </div>-->
-            <input type="number" id="valuea" value="" min="1" max="11" readonly>           
+            <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">
+            <input type="number" id="valuea" value="" min="1" max="11" readonly>
             <input type="button" id="plus" value="+" onclick="increaseNumber('valuea')">
-            <div id="dialogbox" title='Error'>The first value out of range!</div>
+            <div id="dialogbox" title='Virhe'>Anna luku väliltä 1 - 10!</div>
             <select id="select">
                 <option value="addition">+</option>
                 <option value="subtraction">-</option>
                 <option value="multiplication">*</option>
                 <option value="division">/</option>
             </select>
-            <input type="button" id="minus" value="-" onclick="decreaseNumber('valueb')">
+            <input type="button" id="btnminus" value="-" onclick="decreaseNumber('valueb')">
             <input type="number" id="valueb" value="" min="1" max="11" readonly>
             <input type="button" id="btnplus" value="+" onclick="increaseNumber('valueb')">
             <input type="submit" value="Laske" onclick="calculator()">
