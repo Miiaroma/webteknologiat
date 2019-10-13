@@ -49,11 +49,27 @@ body
     text-align: left;
 }
 
-#Uni
+#uni
 {
-  text-align: left; 
-  background-color:lavender;
+  background-color: blueviolet;
+  width: 100px;
+  height: 40px;   
 }
+
+#imgText
+{
+  width: 300px;  
+  padding-left: 100px;
+  
+}
+
+#navBtn
+{
+padding-left: 100px;
+
+}
+
+
 section{
   padding-left: 5vw;
   padding-right: 5vw;

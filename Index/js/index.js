@@ -5,7 +5,7 @@
 
 /*function Array()
 {
-    var schools = ['AMK', 'LUT1, 'LUT2'];
+    var schools = ['AMK', 'LUT', 'SAIMAA'];
 }*/
 
 function getRandomInt(min, max) {
@@ -15,9 +15,7 @@ function getRandomInt(min, max) {
 }
 
 
-/*$("my_image".attr("src", "second.jpg")
-
-function getPreviousPicture(){
+/*function getPreviousPicture(){
 
     index--;
     if (index<0) index = 2;
@@ -38,19 +36,18 @@ $(function()
     });
 });
 
-$(function()
+/*$(function()
 {
     init();
-    console.log( "ready!");
-    let randNr = getRandomInt(1,10);
+    let image 
+    $("#AMK").val();
+    
 
-    $("#valueb").val(randNr);
-    console.log(randNr);
-
-    $("#dialogbox").dialog({
-        autoOpen: false
+   
     });
-});
+});*/
+
+
 
 $("#minus").click(function()
 {let value = $("#valuea").val();
@@ -88,6 +85,7 @@ function init() {
     //console.log(getRandomInt(1,10));
     document.getElementById("valuea").value = getRandomInt(1, 10);
     document.getElementById("valueb").value = getRandomInt(1, 10);
+        
 }
 
 function decreaseNumber(elementId) {
