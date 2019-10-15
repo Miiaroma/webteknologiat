@@ -1,4 +1,5 @@
-var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];;
+var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];
+var text_array = ['AMK', 'LUT', 'SAIMAA'];
 var index;
 
 /*window.onload = function () {
@@ -13,9 +14,16 @@ $(function () {
 function getNextImg(){
 console.log(index);
     index++;
-    if (index > 2) index = 0;
-    $("picture-carousel").attr('src', pictures_array[index]);
-    $("#imgtxt").html(pictures_array[index]);
+    if (index > 2) index = 0
+    $("#picture-carousel").attr('src', pictures_array[index]);
+    $("#imgtxt").html(text_array[index]);
+}
+
+function getPreviousImg(){
+    index--;
+    if (index < 0) index = 2;
+    $("#picture-carousel").attr('src', pictures_array[index]);
+    $("#imgtxt").html(text_array[index]);
 }
 
 /* $('next').on({
