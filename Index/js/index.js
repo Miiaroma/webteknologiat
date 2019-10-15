@@ -1,12 +1,42 @@
+var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];;
+var index;
+
 /*window.onload = function () {
     //init();
     
 }*/
 
-/*function Array()
-{
-    var schools = ['AMK', 'LUT', 'SAIMAA'];
-}*/
+$(function () {
+    init();
+})
+
+function getNextImg(){
+console.log(index);
+    index++;
+    if (index > 2) index = 0;
+    $("picture-carousel").attr('src', pictures_array[index]);
+    $("#imgtxt").html(pictures_array[index]);
+}
+
+/* $('next').on({
+     'click': function(){
+         $('#AMK').attr('src','images/LUT.jpg');
+     }
+ });
+ 
+ $('img').on({
+     'click': function() {
+          var src = ($(this).attr('src') === 'images/LUT.jpg')
+             ? 'LUT.jpg'
+             : 'AMK_on.jpg'; 
+          $(this).attr('src', src);
+     }
+ });
+
+$('next').on({
+ 'click': function () {
+     $('#AMK').attr('src', 'images/LUT.jpg');
+ }});*/
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -14,19 +44,10 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-
-/*function getPreviousPicture(){
-
-    index--;
-    if (index<0) index = 2;
-    $(""
-}*/
-
-$(function()
-{
+$(function () {
     init();
-    console.log( "ready!");
-    let randNr = getRandomInt(1,10);
+    console.log("ready!");
+    let randNr = getRandomInt(1, 10);
 
     $("#valuea").val(randNr);
     console.log(randNr);
@@ -36,56 +57,44 @@ $(function()
     });
 });
 
-/*$(function()
-{
-    init();
-    let image 
-    $("#AMK").val();
-    
 
-   
-    });
-});*/
-
-
-
-$("#minus").click(function()
-{let value = $("#valuea").val();
-console.log(value);
-if (value=undefined || value>10 || value<1){
-    $("#dialogbox").dialog("open");
-}
+$("#minus").click(function () {
+    let value = $("#valuea").val();
+    console.log(value);
+    if (value = undefined || value > 10 || value < 1) {
+        $("#dialogbox").dialog("open");
+    }
 });
 
-$("#btnminus").click(function()
-{let value = $("#valueb").val();
-console.log(value);
-if (value=undefined || value>10 || value<1){
-    $("#dialogbox").dialog("open");
-}
+$("#btnminus").click(function () {
+    let value = $("#valueb").val();
+    console.log(value);
+    if (value = undefined || value > 10 || value < 1) {
+        $("#dialogbox").dialog("open");
+    }
 });
 
-$("#plus").click(function()
-{let value = $("#valuea").val();
-console.log(value);
-if (value=undefined || value>10 || value<1){
-    $("#dialogbox").dialog("open");
-}
+$("#plus").click(function () {
+    let value = $("#valuea").val();
+    console.log(value);
+    if (value = undefined || value > 10 || value < 1) {
+        $("#dialogbox").dialog("open");
+    }
 });
 
-$("#btnplus").click(function()
-{let value = $("#valueb").val();
-console.log(value);
-if (value=undefined || value>10 || value<1){
-    $("#dialogbox").dialog("open");
-}
+$("#btnplus").click(function () {
+    let value = $("#valueb").val();
+    console.log(value);
+    if (value = undefined || value > 10 || value < 1) {
+        $("#dialogbox").dialog("open");
+    }
 });
 
 function init() {
     //console.log(getRandomInt(1,10));
     document.getElementById("valuea").value = getRandomInt(1, 10);
     document.getElementById("valueb").value = getRandomInt(1, 10);
-        
+    index = 0;
 }
 
 function decreaseNumber(elementId) {
@@ -94,7 +103,7 @@ function decreaseNumber(elementId) {
     x--;
     var y = x;
     document.getElementById(elementId).value = x;
-    
+
 }
 
 /*function decreaseNumberB() {
@@ -119,23 +128,12 @@ function increaseNumber(elementName) {
 }*/
 
 function calculator() {
-    
+
     var x = parseInt(document.getElementById("valuea").value);
     var y = parseInt(document.getElementById("valueb").value);
     var select = document.getElementById('select').value;
-    document.getElementById("result").value = operate(x, y, select);  
-    
-    /*try {
+    document.getElementById("result").value = operate(x, y, select);
 
-        var x = parseInt(validate(document.getElementById("valuea").value));
-        var y = parseInt(validate(document.getElementById("valueb").value));
-        var select = document.getElementById('select').value;
-        document.getElementById("result").value = operate(x, y, select);
-    }
-    catch (err) {
-
-        alert("Virhe: " + err.messaqge);
-    }*/
 }
 
 function operate(x, y, select) {
@@ -154,14 +152,3 @@ function operate(x, y, select) {
         return x / y;
     }
 }
-
-/*function validate(value)
-{
-    if (value == null || value == "") {
-        alert("Pakollinen kenttä");
-        return 0;
-    } else if (isNaN(value)) {
-        alert("Syötteen pitää olla numero");
-        return 0;
-    } else return value;
-}*/
