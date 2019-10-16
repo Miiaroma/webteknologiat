@@ -1,6 +1,7 @@
 var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];
 var text_array = ['AMK', 'LUT', 'SAIMAA'];
 var index;
+var intervalId;
 
 /*window.onload = function () {
     //init();
@@ -11,40 +12,35 @@ $(function () {
     init();
 })
 
-function getNextImg(){
-console.log(index);
+function getNextImg() {
+    console.log(index);
     index++;
     if (index > 2) index = 0
     $("#picture-carousel").attr('src', pictures_array[index]);
     $("#imgtxt").html(text_array[index]);
 }
 
-function getPreviousImg(){
+function getPreviousImg() {
     index--;
     if (index < 0) index = 2;
     $("#picture-carousel").attr('src', pictures_array[index]);
     $("#imgtxt").html(text_array[index]);
 }
 
-/* $('next').on({
-     'click': function(){
-         $('#AMK').attr('src','images/LUT.jpg');
-     }
- });
- 
- $('img').on({
-     'click': function() {
-          var src = ($(this).attr('src') === 'images/LUT.jpg')
-             ? 'LUT.jpg'
-             : 'AMK_on.jpg'; 
-          $(this).attr('src', src);
-     }
- });
+function start() {
+    intervalId = setInterval(getNextImg, 2000);
+}
 
-$('next').on({
- 'click': function () {
-     $('#AMK').attr('src', 'images/LUT.jpg');
- }});*/
+function stop(){
+    if(intervalId=null){
+    clearInterval(nIntervId)}
+else 
+{
+    setInterval();
+}
+
+
+}
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -103,6 +99,7 @@ function init() {
     document.getElementById("valuea").value = getRandomInt(1, 10);
     document.getElementById("valueb").value = getRandomInt(1, 10);
     index = 0;
+    this.start();
 }
 
 function decreaseNumber(elementId) {
