@@ -2,6 +2,7 @@ var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];
 var text_array = ['AMK', 'LUT', 'SAIMAA'];
 var index;
 var intervalId;
+/*var LocalStorageKey = 'picId';*/
 
 /*window.onload = function () {
     //init();
@@ -28,18 +29,22 @@ function getPreviousImg() {
 }
 
 function start() {
+    console.log("start");
     intervalId = setInterval(getNextImg, 2000);
 }
 
-function stop(){
-    if(intervalId=null){
-    clearInterval(nIntervId)}
-else 
-{
-    setInterval();
-}
-
-
+function stop() {
+    console.log("stop");
+    if (intervalId) 
+    {
+        console.log("clear")
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+    else 
+    {
+        start();
+    }
 }
 
 function getRandomInt(min, max) {
@@ -99,7 +104,7 @@ function init() {
     document.getElementById("valuea").value = getRandomInt(1, 10);
     document.getElementById("valueb").value = getRandomInt(1, 10);
     index = 0;
-    this.start();
+    start();
 }
 
 function decreaseNumber(elementId) {
@@ -138,7 +143,6 @@ function calculator() {
     var y = parseInt(document.getElementById("valueb").value);
     var select = document.getElementById('select').value;
     document.getElementById("result").value = operate(x, y, select);
-
 }
 
 function operate(x, y, select) {

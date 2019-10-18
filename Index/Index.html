@@ -4,7 +4,7 @@
 <head>
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="images/favicon.png">
     <title>Miia's website</title>
-    <meta <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -38,10 +38,12 @@
             <h2>Vaihtuva elementti ja laskin</h2>
             <div>
                 <div>
-                    <img class="picture" id="picture-carousel" src="images/AMK.jpg" alt= "amk" width="300" height="200"><br>
-                    <div id="imgtxt">AMK</div><br>
+                    <img class="picture" id="picture-carousel" src="images/AMK.jpg" alt="amk" width="300" height="200">
+                    <div id="imgtxt">
+                        <p id=txt>AMK</p>
+                    </div><br>
 
-                  <!---- <img id="LUT" src="images/LUT.jpg" alt="lut" width="300" height="200">
+                    <!---- <img id="LUT" src="images/LUT.jpg" alt="lut" width="300" height="200">
                     
                     <div id="imgtxt"><button id="uni">LUT</button></div><br>
 
@@ -49,37 +51,39 @@
                     
                     <div id="imgtxt"><button id="uni">SAIMAA</button></div><br> -->
 
-                <div width="300">
-                    <div id="navBtn"><button id=previous i style='font-size:14px' class='fas'onclick="getPreviousImg()">&#xf048;</button
-                            >
-                        <button id="stop" i style='font-size:14px' class='fas'onclick="start()">&#xf04d;</i></button>
-                        <button id="next" i style='font-size:14px' class='fas'onclick="getNextImg()">&#xf051;</button >
-                    </div>
-                </div>
-            </div><br>
+                    <div width="300">
+                        <div id="navBtn">
+                            <button id="previous" i style='font-size:14px' class='fas'
+                                onclick="getPreviousImg()">&#xf048;</button>
+                            <button id="stopInterval" i style='font-size:14px' class='fas' onclick="stop()">&#xf04d;</button>
+                            <button id="next" i style='font-size:14px' class='fas'
+                                onclick="getNextImg()">&#xf051;</button>
+                        </div>
+                    </div>                    
+                </div><br>
 
-            Tämä on yksinkertainen laskin, jolla voit tehdä seuraavat laskutoimitukset satunnaisluvuilla:
-            <ul>
-                <li>Yhteen-</li>
-                <li>Vähennys-</li>
-                <li>Kerto- ja</li>
-                <li>Jakolasku</li>
-            </ul><br>
-            <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">
-            <input type="number" id="valuea" value="" min="1" max="11" readonly>
-            <input type="button" id="plus" value="+" onclick="increaseNumber('valuea')">
-            <div id="dialogbox" title='Virhe'>Anna luku väliltä 1 - 10!</div>
-            <select id="select">
-                <option value="addition">+</option>
-                <option value="subtraction">-</option>
-                <option value="multiplication">*</option>
-                <option value="division">/</option>
-            </select>
-            <input type="button" id="btnminus" value="-" onclick="decreaseNumber('valueb')">
-            <input type="number" id="valueb" value="" min="1" max="11" readonly>
-            <input type="button" id="btnplus" value="+" onclick="increaseNumber('valueb')">
-            <input type="submit" value="Laske" onclick="calculator()">
-            <input type="number" id="result" value="" />
+                Tämä on yksinkertainen laskin, jolla voit tehdä seuraavat laskutoimitukset satunnaisluvuilla:
+                <ul>
+                    <li>Yhteen-</li>
+                    <li>Vähennys-</li>
+                    <li>Kerto- ja</li>
+                    <li>Jakolasku</li>
+                </ul><br>
+                <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">
+                <input type="number" id="valuea" value="" min="1" max="11" readonly>
+                <input type="button" id="plus" value="+" onclick="increaseNumber('valuea')">
+                <div id="dialogbox" title='Virhe'>Anna luku väliltä 1 - 10!</div>
+                <select id="select">
+                    <option value="addition">+</option>
+                    <option value="subtraction">-</option>
+                    <option value="multiplication">*</option>
+                    <option value="division">/</option>
+                </select>
+                <input type="button" id="btnminus" value="-" onclick="decreaseNumber('valueb')">
+                <input type="number" id="valueb" value="" min="1" max="11" readonly>
+                <input type="button" id="btnplus" value="+" onclick="increaseNumber('valueb')">
+                <input type="submit" value="Laske" onclick="calculator()">
+                <input type="number" id="result" value="" />
         </section><br>
     </main>
     <footer>
