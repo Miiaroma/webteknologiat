@@ -53,25 +53,25 @@ body
 {
   width: 100px;    
   text-align: center;  
-  background-color: blueviolet; 
+  background-color: blueviolet;
   margin-left: 100px; 
   margin-right: 100px;
+  border: 2px solid blueviolet;
+  border-radius: 8px;
 }
 
 #txt
 {
-  padding-left: 100px;
-  padding-right: 100px;
+  /*width: 100px;*/ 
 }
 
 #navBtn
 {
 padding-left: 100px;
-
 }
 
-
-section{
+section
+{
   padding-left: 5vw;
   padding-right: 5vw;
   padding-bottom: 5vw;

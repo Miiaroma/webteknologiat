@@ -14,7 +14,7 @@ $(function () {
 })
 
 function getNextImg() {
-    console.log(index);
+   /* console.log(index);*/
     index++;
     if (index > 2) index = 0
     $("#picture-carousel").attr('src', pictures_array[index]);
@@ -30,12 +30,12 @@ function getPreviousImg() {
 
 function start() {
     console.log("start");
-    intervalId = setInterval(getNextImg, 2000);
+    intervalId = setInterval(getNextImg, 3000);
 }
 
 function stop() {
     console.log("stop");
-    if (intervalId) 
+    if (intervalId != null) 
     {
         console.log("clear")
         clearInterval(intervalId);
@@ -55,11 +55,11 @@ function getRandomInt(min, max) {
 
 $(function () {
     init();
-    console.log("ready!");
+    /*console.log("ready!");*/
     let randNr = getRandomInt(1, 10);
 
     $("#valuea").val(randNr);
-    console.log(randNr);
+    /* console.log(randNr);*/
 
     $("#dialogbox").dialog({
         autoOpen: false
@@ -104,7 +104,7 @@ function init() {
     document.getElementById("valuea").value = getRandomInt(1, 10);
     document.getElementById("valueb").value = getRandomInt(1, 10);
     index = 0;
-    start();
+    /*start(); Tämä aiheutti stop-nappulan toimimattomuuden*/
 }
 
 function decreaseNumber(elementId) {
