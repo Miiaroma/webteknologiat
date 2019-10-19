@@ -30,7 +30,7 @@ function getPreviousImg() {
 
 function start() {
     console.log("start");
-    intervalId = setInterval(getNextImg, 3000);
+    intervalId = setInterval(getNextImg, 2000);
 }
 
 function stop() {
@@ -129,13 +129,6 @@ function increaseNumber(elementName) {
     var y = x;
     document.getElementById(elementName).value = x;
 }
-
-/*function increaseNumberB() {
-    var x = document.getElementById("valueb").value;
-    x++;
-    var y = x;
-    document.getElementById("valueb").value = x;
-}*/
 
 function calculator() {
 

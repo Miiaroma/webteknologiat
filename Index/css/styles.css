@@ -65,6 +65,11 @@ body
   /*width: 100px;*/ 
 }
 
+#result 
+{
+background-color: blueviolet;
+}
+
 #navBtn
 {
 padding-left: 100px;

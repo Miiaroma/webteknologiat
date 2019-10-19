@@ -31,11 +31,15 @@
             <h1> Tervetuloa Miian kotisivuille!</h1>
 
             <p>
-                Tällä sivustolla kerrotaan Miian bisneksistä ja välillä muutakin. Miia on toisen vuoden
+                Tällä sivustolla kerrotaan Miian koodausharjoituksista ja välillä muutakin. Miia on toisen vuoden
                 tradenomiopiskelija Saimaan ammattikorkeakoulussa.
-            </p><br>
+            </p>
 
-            <h2>Vaihtuva elementti ja laskin</h2>
+            <h2>Vaihtuva elementti</h2>
+
+            <p>Vaihtuvan elementin start-toiminto on poistettu init:stä. Kuvakaruselli käynnistyy ja pysähtyy
+                stop-nappulasta. Kuvia voi selailla eteen- ja taakse-nappuloiden avulla. Aloituskuvan nimikylttiä vielä
+                muokattava. Local storage lisättävä.</p><br>
             <div>
                 <div>
                     <img id="picture-carousel" src="images/AMK.jpg" alt="amk" width="300" height="200">
@@ -50,15 +54,16 @@
                             <button id="next" i style='font-size:14px' class='fas'
                                 onclick="getNextImg()">&#xf051;</button>
                         </div>
-                    </div>                    
+                    </div>
                 </div><br>
 
+                <h2>Laskin</h2>
                 Tämä on yksinkertainen laskin, jolla voit tehdä seuraavat laskutoimitukset satunnaisluvuilla:
                 <ul>
-                    <li>Yhteen-</li>
-                    <li>Vähennys-</li>
-                    <li>Kerto- ja</li>
-                    <li>Jakolasku</li>
+                    <li>yhteen-</li>
+                    <li>vähennys-</li>
+                    <li>kerto- ja</li>
+                    <li>jakolasku</li>
                 </ul><br>
                 <input type="button" id="minus" value="-" onclick="decreaseNumber('valuea')">
                 <input type="number" id="valuea" value="" min="1" max="11" readonly>
