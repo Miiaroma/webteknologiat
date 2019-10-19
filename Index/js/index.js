@@ -13,8 +13,7 @@ $(function () {
     init();
 })
 
-function getNextImg() {
-   /* console.log(index);*/
+function getNextImg() {   
     index++;
     if (index > 2) index = 0
     $("#picture-carousel").attr('src', pictures_array[index]);
@@ -54,13 +53,9 @@ function getRandomInt(min, max) {
 }
 
 $(function () {
-    init();
-    /*console.log("ready!");*/
+    init();    
     let randNr = getRandomInt(1, 10);
-
-    $("#valuea").val(randNr);
-    /* console.log(randNr);*/
-
+    $("#valuea").val(randNr);   
     $("#dialogbox").dialog({
         autoOpen: false
     });
