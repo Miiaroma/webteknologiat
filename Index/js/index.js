@@ -2,7 +2,7 @@ var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];
 var text_array = ['AMK', 'LUT', 'SAIMAA'];
 var index;
 var intervalId;
-/*var LocalStorageKey = 'picId';*/
+/*var localStorageKey = 'picId';*/
 
 /*window.onload = function () {
     //init();
@@ -12,6 +12,10 @@ var intervalId;
 $(function () {
     init();
 })
+
+function fadeTo(){
+    $("#picture-carousel").fadeTo('src', 0.6);
+}
 
 function getNextImg() {   
     index++;
@@ -100,6 +104,7 @@ function init() {
     document.getElementById("valueb").value = getRandomInt(1, 10);
     index = 0;
     /*start(); Tämä aiheutti stop-nappulan toimimattomuuden*/
+    fadeTo();
 }
 
 function decreaseNumber(elementId) {
