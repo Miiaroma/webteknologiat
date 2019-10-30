@@ -2,33 +2,65 @@ var pictures_array = ['images/AMK.jpg', 'images/LUT.jpg', 'images/SAIMAA.jpg'];
 var text_array = ['AMK', 'LUT', 'SAIMAA'];
 var index;
 var intervalId;
-/*var localStorageKey = 'picId';*/
+var localStorageKey = 'image';
 
-/*window.onload = function () {
-    //init();
+window.onload = function () {
+    init();
     
+}
+
+/*$(function(){
+    init();
+}    
+);*/
+
+function init() {
+    //console.log(getRandomInt(1,10));
+    document.getElementById("valuea").value = getRandomInt(1, 10);
+    document.getElementById("valueb").value = getRandomInt(1, 10); 
+    intervalId = null;
+    if (localStorage.hasOwnProperty(localStorageKey))
+    {
+        index = localStorage.getItem(localStorageKey);
+    }  
+    else 
+    {
+        index = 0;
+    }
+    console.log(index);
+    intervalId = setInterval(getNextImg, 2000);
+    /*start(); 
+    /*fadeTo();*/     
+    let randNr = getRandomInt(1, 10);
+    $("#valuea").val(randNr);
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+}
+
+/*function fadeTo() {
+    $("#picture-carousel").fadeTo('src', 0.6);
 }*/
 
-$(function () {
-    init();
-})
-
-function fadeTo(){
-    $("#picture-carousel").fadeTo('src', 0.6);
-}
-
-function getNextImg() {   
-    index++;
+function getNextImg() {
+    console.log(index);
+    
     if (index > 2) index = 0
+    console.log("näytetään kuvaa "+ index);
     $("#picture-carousel").attr('src', pictures_array[index]);
     $("#imgtxt").html(text_array[index]);
+    $("#picture-carousel").fadeTo('src', 0.6);
+    index++;
+    localStorage.setItem(localStorageKey, index);    
 }
 
-function getPreviousImg() {
+function getPreviousImg() {    
     index--;
     if (index < 0) index = 2;
     $("#picture-carousel").attr('src', pictures_array[index]);
     $("#imgtxt").html(text_array[index]);
+    $("#picture-carousel").fadeTo('src', 0.6);
+    localStorage.setItem(localStorageKey, index);
 }
 
 function start() {
@@ -38,16 +70,17 @@ function start() {
 
 function stop() {
     console.log("stop");
-    if (intervalId != null) 
-    {
+    clearInterval(intervalId);
+    /*if (intervalId != null) {
         console.log("clear")
-        clearInterval(intervalId);
+        
         intervalId = null;
     }
-    else 
-    {
-        start();
-    }
+    else {
+        /*start();*/
+        /*intervalId = setInterval(getNextImg, 2000);
+        console.log("start");
+    }*/
 }
 
 function getRandomInt(min, max) {
@@ -56,14 +89,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-$(function () {
-    init();    
+/*$(function () {
+    init();
     let randNr = getRandomInt(1, 10);
-    $("#valuea").val(randNr);   
+    $("#valuea").val(randNr);
     $("#dialogbox").dialog({
         autoOpen: false
     });
-});
+});*/
 
 
 $("#minus").click(function () {
@@ -98,14 +131,7 @@ $("#btnplus").click(function () {
     }
 });
 
-function init() {
-    //console.log(getRandomInt(1,10));
-    document.getElementById("valuea").value = getRandomInt(1, 10);
-    document.getElementById("valueb").value = getRandomInt(1, 10);
-    index = 0;
-    /*start(); Tämä aiheutti stop-nappulan toimimattomuuden*/
-    fadeTo();
-}
+
 
 function decreaseNumber(elementId) {
 
