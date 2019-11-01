@@ -103,6 +103,11 @@ to {
 }
 }
 
+button
+{
+  background-color: blueviolet;
+}
+
 footer
 {
   background-color: blueviolet;      
@@ -119,16 +124,39 @@ footer
   height: 230px;
   background-color: blueviolet;
   width: 900px;
+  padding: 0px; 
+  width: 100%;
+
+  display: block;
+  grid-template-columns: 300px;
+  height: 675px;
+  grid-template-rows: 250px 250px 250px;
+  width: 300px;
   padding: 0px;
+  align-content: center;
 }
+
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: blueviolet;
   border: 2px solid white;
   padding: 0px;
   font-size: 14px;
   text-align: center;
 }
 
-.list-container{
-
+/*.list-container{
+  display: block;
+  grid-template-columns: 300px;
+  height: 675px;
+  grid-template-rows: 250px 250px 250px;
+  width: 300px;
+  padding: 0px;
 }
+
+.list-item {
+  background-color: blueviolet;
+  border: 2px solid white;
+  padding: 0px;
+  font-size: 14px;
+  text-align: center;
+}*/

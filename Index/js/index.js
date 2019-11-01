@@ -5,8 +5,7 @@ var intervalId;
 var localStorageKey = 'image';
 
 window.onload = function () {
-    init();
-    
+    init();    
 }
 
 /*$(function(){
@@ -63,13 +62,11 @@ function getPreviousImg() {
     localStorage.setItem(localStorageKey, index);
 }
 
-function start() {
-    console.log("start");
+function start() {    
     intervalId = setInterval(getNextImg, 2000);
 }
 
-function stop() {
-    console.log("stop");
+function stop() {    
     clearInterval(intervalId);
     /*if (intervalId != null) {
         console.log("clear")
@@ -131,15 +128,11 @@ $("#btnplus").click(function () {
     }
 });
 
-
-
 function decreaseNumber(elementId) {
-
     var x = document.getElementById(elementId).value;
     x--;
     var y = x;
     document.getElementById(elementId).value = x;
-
 }
 
 /*function decreaseNumberB() {
