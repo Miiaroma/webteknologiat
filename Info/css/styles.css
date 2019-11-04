@@ -121,19 +121,10 @@ footer
 .grid-container {
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  height: 230px;
-  background-color: blueviolet;
-  width: 900px;
+  height: 230px;  
+  width: 0px;
   padding: 0px; 
   width: 100%;
-
-  display: block;
-  grid-template-columns: 300px;
-  height: 675px;
-  grid-template-rows: 250px 250px 250px;
-  width: 300px;
-  padding: 0px;
-  align-content: center;
 }
 
 .grid-item {
@@ -144,7 +135,7 @@ footer
   text-align: center;
 }
 
-/*.list-container{
+.list-container{
   display: block;
   grid-template-columns: 300px;
   height: 675px;
@@ -159,4 +150,4 @@ footer
   padding: 0px;
   font-size: 14px;
   text-align: center;
-}*/
+}

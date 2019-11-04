@@ -6,17 +6,18 @@
     <title>Miia's website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
- 
+
 <body>
     <header><strong>Miian kotisivu</strong></header>
     <main>
@@ -46,7 +47,7 @@
                 <input type="button" id="show" value="Hae" onclick="setAddress()"><br><br>
             </div>
 
-           <!---- <h2>Referenssit</h2>
+            <!---- <h2>Referenssit</h2>
             <table>
                 <tr id="first-row">
                     <th>Yritys</th>
@@ -70,8 +71,8 @@
                 </tr>
             </table><br> --->
             <h2>Lista- ja ruudukkonäkymä</h2>
-           <div> <button id="list" ><i class="fa fa-bars"></i> List</button>
-            <button id="grid" ><i class="fa fa-th-large"></i> Grid</button></div><br>
+            <div> <button id="list"><i class="fa fa-bars"></i> List</button>
+                <button id="grid"><i class="fa fa-th-large"></i> Grid</button></div><br>
 
             <!--<div class="list-container">
                     <div class="list-item">
@@ -80,14 +81,16 @@
                     <div class="grid-item"><img id="picture-carousel" src="images/LUT.jpg" alt="amk" width="296" height="200">LUT</div>
                     <div class="grid-item"><img id="picture-carousel" src="images/SAIMAA.jpg" alt="amk" width="296" height="200">Saimaa</div>                   
                   </div><br> -->
-                  
-           <div class="grid-container" id="gridview">
+
+            <div class="list-container" id="gridview">
                 <div class="grid-item">
                     <img id="picture-carousel" src="images/AMK.jpg" alt="amk" width="296" height="200">AMK
                 </div>
-                <div class="grid-item"><img id="picture-carousel" src="images/LUT.jpg" alt="amk" width="296" height="200">LUT</div>
-                <div class="grid-item"><img id="picture-carousel" src="images/SAIMAA.jpg" alt="amk" width="296" height="200">Saimaa</div>                   
-              </div>               
+                <div class="grid-item"><img id="picture-carousel" src="images/LUT.jpg" alt="amk" width="296"
+                        height="200">LUT</div>
+                <div class="grid-item"><img id="picture-carousel" src="images/SAIMAA.jpg" alt="amk" width="296"
+                        height="200">Saimaa</div>
+            </div>
 
         </section>
     </main>
