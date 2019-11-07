@@ -78,8 +78,16 @@
                 <input type="number" id="valueb" value="" min="1" max="11" readonly>
                 <input type="button" id="btnplus" value="+" onclick="increaseNumber('valueb')">
                 <input type="submit"id="btnsubmit" value="Laske" onclick="calculator()">
-                <input type="number" id="result" value="" readonly/>
-        </section><br>
+                <input type="number" id="result" value="" readonly/><br>  
+                
+                <h2>Ajastin</h2>    
+                <div class="inner"><canvas id="canvas" width="150" height="150"></canvas><br>
+                Kello on nyt    
+                <p id="currentTime"></p>
+                Hälytysaika  <input type="time" id="alarmTime" name="appt"><button type="button" id="alarm" onclick="setAlarm()">Aseta</button>            
+                </div>
+                
+        </section><br>        
     </main>
     <footer>
         <p>Made by&copy;Miia</p>
