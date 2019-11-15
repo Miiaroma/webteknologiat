@@ -84,7 +84,10 @@
                 <div class="inner"><canvas id="canvas" width="150" height="150"></canvas><br>
                 Kello on nyt    
                 <p id="currentTime"></p>
-                Hälytysaika  <input type="time" id="alarmTime" name="appt"><button type="button" id="alarm" onclick="setAlarm()">Aseta</button>            
+                Hälytysaika  <input type="time" id="alarmTime" name="appt">
+                <button type="button" id="alarm" onclick="setAlarm()">Aseta</button> 
+                <audio id="player" scr="bird.wav" type="audio/wav"></audio>
+                <button  type="button" id="pauseBtn" onclick="pauseAudio()">Lopeta</button>
                 </div>
                 
         </section><br>        

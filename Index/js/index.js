@@ -5,6 +5,38 @@ var intervalId;
 var localStorageKey = 'image';
 var alarmHour;
 var alarmMin;
+var time;
+var alarmTime;
+var audio;
+
+function init() {
+    //console.log(getRandomInt(1,10));
+    document.getElementById("valuea").value = getRandomInt(1, 10);
+    document.getElementById("valueb").value = getRandomInt(1, 10);
+    intervalId = null;
+    if (localStorage.hasOwnProperty(localStorageKey)) {
+        index = localStorage.getItem(localStorageKey);
+    }
+    else {
+        index = 0;
+    }
+    //console.log(index);
+    intervalId = setInterval(getNextImg, 2000);
+    //start();
+    let randNr = getRandomInt(1, 10);
+    $("#valuea").val(randNr);
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+    canvas = document.getElementById('canvas');
+    ctx = canvas.getContext('2d');
+
+    window.requestAnimationFrame(clock);
+    time();
+    setAlarm();  
+    
+   
+}
 
 function clock() {
     var now = new Date();
@@ -46,7 +78,7 @@ function clock() {
 
     var sec = now.getSeconds();
     var min = now.getMinutes();
-    var hr = now.getHours();
+    var hr = now.getHours(); 
     hr = hr >= 12 ? hr - 12 : hr;
 
     ctx.fillStyle = 'black';
@@ -101,6 +133,12 @@ function clock() {
     ctx.restore();
     time();
     window.requestAnimationFrame(clock);
+
+    if(alarmHour == now.getHours() && alarmMin == min)
+    {
+    playAudio();
+    }
+    
 }
 
 window.onload = function () {
@@ -112,41 +150,11 @@ window.onload = function () {
 }    
 );*/
 
-function init() {
-    //console.log(getRandomInt(1,10));
-    document.getElementById("valuea").value = getRandomInt(1, 10);
-    document.getElementById("valueb").value = getRandomInt(1, 10);
-    intervalId = null;
-    if (localStorage.hasOwnProperty(localStorageKey)) {
-        index = localStorage.getItem(localStorageKey);
-    }
-    else {
-        index = 0;
-    }
-    console.log(index);
-    intervalId = setInterval(getNextImg, 2000);
-    /*start(); 
-    /*fadeTo();*/
-    let randNr = getRandomInt(1, 10);
-    $("#valuea").val(randNr);
-    $("#dialogbox").dialog({
-        autoOpen: false
-    });
-    canvas = document.getElementById('canvas');
-    ctx = canvas.getContext('2d');
-    
-   window.requestAnimationFrame(clock);  
-}
 
-/*function fadeTo() {
-    $("#picture-carousel").fadeTo('src', 0.6);
-}*/
 
 function getNextImg() {
-    //console.log(index);
-
     if (index > 2) index = 0
-    console.log("näytetään kuvaa " + index);
+    //console.log("näytetään kuvaa " + index);
     $("#picture-carousel").attr('src', pictures_array[index]);
     $("#imgtxt").html(text_array[index]);
     $("#picture-carousel").fadeTo('src', 0.6);
@@ -275,18 +283,30 @@ function operate(x, y, select) {
     }
 }
 
-
 function time() {
     var date = new Date();
-    var time = date.toLocaleTimeString("fi-FI");
-    document.getElementById("currentTime").innerHTML = time;
+    var time = date.toLocaleTimeString("fi-FI");   
+    document.getElementById("currentTime").innerHTML = time;   
 
 
-    /*$("#inner").append("timestring")*/    
+    /*$("#inner").append("timestring")*/
 }
 
-function setAlarm(){
-    var alarm = document.getElementById("alarmTime").value;
-    alarmHour = alarm.substring(0,2);
-    alarmMin = alarm.substring(3,5);
+function setAlarm() {
+    var alarm = document.getElementById("alarmTime").value;   
+    alarmHour = alarm.substring(0, 2);    
+    alarmMin = alarm.substring(3, 5);
+
+}
+
+function playAudio()
+{audio = document.getElementById("player");
+audio.play();
+}
+
+//(#myAudio).play();
+
+function pauseAudio()
+{
+audio.pause();
 }

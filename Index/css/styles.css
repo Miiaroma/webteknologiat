@@ -65,7 +65,12 @@ body
   /*width: 100px;*/ 
 }
 
-#btnsubmit 
+#btnsubmit
+{
+  background-color: blueviolet;
+}
+
+button
 {
 background-color: blueviolet;
 }
