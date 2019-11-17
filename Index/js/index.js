@@ -7,7 +7,7 @@ var alarmHour;
 var alarmMin;
 var time;
 var alarmTime;
-var audio;
+var voice;
 
 function init() {
     //console.log(getRandomInt(1,10));
@@ -33,8 +33,8 @@ function init() {
 
     window.requestAnimationFrame(clock);
     time();
-    setAlarm();  
-    
+    //setAlarm();  
+    voice = document.getElementById('player');
    
 }
 
@@ -137,6 +137,7 @@ function clock() {
     if(alarmHour == now.getHours() && alarmMin == min)
     {
     playAudio();
+
     }
     
 }
@@ -286,9 +287,7 @@ function operate(x, y, select) {
 function time() {
     var date = new Date();
     var time = date.toLocaleTimeString("fi-FI");   
-    document.getElementById("currentTime").innerHTML = time;   
-
-
+    document.getElementById("currentTime").innerHTML = time;  
     /*$("#inner").append("timestring")*/
 }
 
@@ -296,17 +295,16 @@ function setAlarm() {
     var alarm = document.getElementById("alarmTime").value;   
     alarmHour = alarm.substring(0, 2);    
     alarmMin = alarm.substring(3, 5);
-
 }
 
 function playAudio()
-{audio = document.getElementById("player");
-audio.play();
+{
+voice.play();
 }
 
-//(#myAudio).play();
+//("#player").play();
 
 function pauseAudio()
 {
-audio.pause();
+voice.pause();
 }
