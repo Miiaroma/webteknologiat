@@ -9,6 +9,15 @@ var time;
 var alarmTime;
 var voice;
 
+window.onload = function () {
+    init();
+}
+
+/*$(function(){
+    init();
+}    
+);*/
+
 function init() {
     //console.log(getRandomInt(1,10));
     document.getElementById("valuea").value = getRandomInt(1, 10);
@@ -33,9 +42,8 @@ function init() {
 
     window.requestAnimationFrame(clock);
     time();
-    //setAlarm();  
+    //setAlarm();
     voice = document.getElementById('player');
-   
 }
 
 function clock() {
@@ -137,21 +145,8 @@ function clock() {
     if(alarmHour == now.getHours() && alarmMin == min)
     {
     playAudio();
-
-    }
-    
+    }    
 }
-
-window.onload = function () {
-    init();
-}
-
-/*$(function(){
-    init();
-}    
-);*/
-
-
 
 function getNextImg() {
     if (index > 2) index = 0
@@ -302,9 +297,8 @@ function playAudio()
 voice.play();
 }
 
-//("#player").play();
-
 function pauseAudio()
 {
 voice.pause();
+location.reload();
 }
