@@ -1,7 +1,63 @@
+var index = 0;
+var url = "http://api.icndb.com/jokes/random/1";
+var data;
+var success;
+
+//$(document).ready(function () {
+$(function(){
+    $("#gif").hide();
+     
+});
+
+$("#btn").click(function () {
+let newJokesArray = [];
+
+$("#gif").show();
+
+    $.ajax({
+         type: "GET",
+         url: url,
+         dataType: "json",
+         success: function (response) {
+             $("#gif").hide();
+             $("#btn").attr("disabled", "true");
+             //console.log(response.value);            
+
+             $.each(response.value, function(index, jokeObject){
+                 //console.log(jokeObject.joke)
+                 $("#jokeInfo").append(jokeObject.joke); 
+
+                 index++
+                 $("aside").html('Counter:' + index);                 
+             });
+                    
+        },    
+        error: function (errorResponse) {
+            $("#gif").hide();
+            Console.log("Error msg")
+        },
+    });
+
+   /* $.getJSON(urlNorris,
+        function (result) {
+            $.each(result.value, function (i, field) {
+                $("#jokesDiv").append(field.joke + "<br>");
+            });            
+        });
+
+   $(document).ajaxStart(function () {
+        });
+
+    $(document).ajaxStop(function () {
+    });*/
+
+});
+
+
 window.onload = function () {
     var address = "Yliopistonkatu 36";
     var city = "Lappeenranta";
-    document.getElementById("map").src = 'https://www.google.com/maps?q=' + address + city + '&output=embed';    
+    document.getElementById("map").src = 'https://www.google.com/maps?q=' + address + city + '&output=embed';
 }
 
 function setAddress() {
@@ -19,3 +75,4 @@ $("#list").click(function () {
     console.log("listanäkymä");
     $("#gridview").removeClass("grid-container").addClass("list-container");
 });
+
