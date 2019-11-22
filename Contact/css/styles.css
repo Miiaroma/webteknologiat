@@ -76,3 +76,7 @@ footer
   padding: 5px;  
   width: 100% !important; 
 }
+
+button{
+background-color: blueviolet;
+}

@@ -154,6 +154,19 @@ footer
 }
 
 #jokeInfo{
-  background-color: blueviolet;
-  color: white;
+ font: italic;
+ font-family: cursive;
 }
+
+aside {
+  width: 40%;
+  padding-left: .5rem;
+  margin-left: .5rem;
+  float: right;  
+  box-shadow: inset 5px 0 5px -5px blueviolet;
+  font-style: italic;
+  color: black;
+}
+
+aside > p {
+  margin: .5rem;}

@@ -28,6 +28,7 @@ $("#gif").show();
                  $("#jokeInfo").append(jokeObject.joke); 
 
                  index++
+            $("#gif").hide();
                  $("aside").html('Counter:' + index);                 
              });
                     
