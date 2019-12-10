@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="images/favicon.png" sizes="16x16" type="images/favicon.png">
+    <title>Liput</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liput</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+
+<body>
+        <header><strong>Liput</strong></header>        
+        <div> <img id="banner" src="images/pelto.jpg" alt="Banner" width="100%" height="100%"></div>
+        <br>
+    <div class="container">
+
+        <h2>Lipun hinta</h2>
+        <br>
+
+        <div class="row">
+            <div class="col-xl-8">
+
+                <h3>Täytä tiedot</h3>
+                <br>
+
+                <form>
+
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label>Etunimi</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="Etunimi" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>Sukunimi</label>
+                            <input type="text" id="lastName" class="form-control" placeholder="Sukunimi" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>Ikä</label>
+                            <input type="number" id="age" class="form-control" placeholder="Ikä" min="0" required>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" id="soldier" class="form-check-input">
+                                <label class="form-check-label">Olen varusmies</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" id="student" class="form-check-input">
+                                <label class="form-check-label">Olen opiskelija</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" id="mtkMember" class="form-check-input">
+                                <label class="form-check-label">Olen MTK:n jäsen</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <input type="button" class="btn btn-success" value="Näytä hinta"
+                        onclick="ticketType(); calculatePrice()">
+
+                </form>
+
+                <br>
+                <h3 id="finalPrice"></h3>
+
+                <br>
+
+            </div>
+
+            <div class="col-xl-4">
+
+                <button onclick="showPrices()" class="btn btn-info">Lisätietoja hinnoista</button>
+
+                <div id="prices">
+
+                    <h3>Hinnat</h3>
+
+                    <p>Lipun hinta muodostuu seuraavilla ehdoilla:
+                        vain yksi alennus myönnetään. Paitsi, jos olet sekä opiskelija että Mtk:n jäsen, saat siinä
+                        tapauksessa molemmat alennukset.</p>
+
+                    <ul id="priceList">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <p>Made by &copy;Miia</p>
+    </footer>
+    <script src="js/ticket.js"></script>   
+</body>
+
+</html>

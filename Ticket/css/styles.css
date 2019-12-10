@@ -1,0 +1,25 @@
+#prices{
+    display: none;
+    margin-top: 50px;
+}
+
+#calculatePrice {
+    margin-top: 50px;
+}
+
+footer
+{
+  background-color:#28a745; 
+  color: white;     
+  height: 100px; 
+  text-align: center;      
+  font-family: Verdana;   
+  padding: 10px;  
+  width: 100% !important; 
+}
+
+#banner
+{
+  max-height: 300px;
+  display: flex;
+}
