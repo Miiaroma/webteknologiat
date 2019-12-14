@@ -11,11 +11,11 @@
     <title>Liput</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    
+    <!--<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">-->
 </head>
 
 <body>
@@ -30,15 +30,15 @@
         <div class="row">
             <div class="col-xl-8">
 
-                <h3>Täytä tiedot</h3>
+                <p id="font">Täytä kaikki nimi- ja ikätiedot sekä valitse mahdollinen alennus lipun hinnan laskemiseksi.<p>
                 <br>
 
-                <form>
-
+                <form>                    
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label>Etunimi</label>
                             <input type="text" id="firstName" class="form-control" placeholder="Etunimi" required>
+                           <!---- <div id="dialogbox" title='Virhe'>Anna nimi!</div>-->
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>Sukunimi</label>
@@ -46,9 +46,9 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label>Ikä</label>
-                            <input type="number" id="age" class="form-control" placeholder="Ikä" min="0" required>
+                            <input type="number" id="age" class="form-control" placeholder="Ikä" min="0" required>                           
                         </div>
-
+                        
                         <div class="form-group">
 
                             <div class="form-check form-check-inline">
@@ -71,7 +71,7 @@
                     </div>
 
                     <br>
-                    <input type="button" class="btn btn-success" value="Näytä hinta"
+                    <input type="button" class="btn btn-success" id="dialog" value="Näytä hinta"
                         onclick="ticketType(); calculatePrice()">
 
                 </form>
@@ -85,14 +85,14 @@
 
             <div class="col-xl-4">
 
-                <button onclick="showPrices()" class="btn btn-info">Lisätietoja hinnoista</button>
+                <button onclick="showPrices()" class="btn btn-info">Lisätiedot hinnoista</button>
 
                 <div id="prices">
 
                     <h3>Hinnat</h3>
 
                     <p>Lipun hinta muodostuu seuraavilla ehdoilla:
-                        vain yksi alennus myönnetään. Paitsi, jos olet sekä opiskelija että Mtk:n jäsen, saat siinä
+                        vain yksi alennus myönnetään. Paitsi, jos olet sekä opiskelija että MTK:n jäsen, saat siinä
                         tapauksessa molemmat alennukset.</p>
 
                     <ul id="priceList">
@@ -104,9 +104,9 @@
     </div>
     <br>
     <footer>
-        <p>Made by &copy;Miia</p>
+       <!-- <p>Made by &copy;Miia</p>-->
     </footer>
-    <script src="js/ticket.js"></script>   
+    <script src="js/ticket.js"></script>      
 </body>
 
 </html>
