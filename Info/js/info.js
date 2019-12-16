@@ -41,7 +41,6 @@ $("#btn").click(function () {
         },
     });
 
-
     /* $.getJSON(urlNorris,
          function (result) {
              $.each(result.value, function (i, field) {
@@ -74,7 +73,7 @@ $("#td").click(function () {
                 console.log(value);
                 $("#todo").append(value.id + ' ' + value.title);
                 $('<input type="button" id="tdBtn" onClick="moreInfo(' + index + ')"/>').appendTo("#todo");
-                $("#todo").append("<br>");
+                $("#todo").append("<br>"+"<br>");
             });
 
             /*index++
@@ -103,7 +102,7 @@ function moreInfo(id) {
         success: function (response) {
 
             console.log(response);
-            $("#todo").append(response.id +""+response.title+""+response.description+""+response.complete+""+response.cancelled);
+            $("#todo").append(response.id +" "+response.title+": "+response.description+", completed: "+response.complete+", cancelled: "+response.cancelled+"."+"<br>");
             $("#todo").append("<br>");
 
         },

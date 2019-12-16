@@ -109,6 +109,15 @@ button
   color: white;
 }
 
+#tdBtn
+{
+ background-color:  blueviolet;
+ color: white;
+ padding-left: 1vw;
+ margin-left: 1vw;
+
+}
+
 footer
 {
   background-color: blueviolet;      
