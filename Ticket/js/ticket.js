@@ -88,16 +88,7 @@ function showPrices() {
     priceList = priceList + "</ul>";
     document.getElementById("priceList").innerHTML = priceList;
 
-    $("#prices").show();
-
-    /*var content = $("#prices");
-
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }*/
-
+    $("#prices").show();   
 }
 
 var discounts = [
